@@ -21,8 +21,9 @@ function imprimirMapa(mapa, jugador) {
     }
 
     }
-console.table(matriz);
 
+console.table(matriz);
+console.log("El jugador se encuentra en la posicion: " + jugador.posicionActual);
 }    
 
 
