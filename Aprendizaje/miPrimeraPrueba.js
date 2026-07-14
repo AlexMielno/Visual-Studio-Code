@@ -28,7 +28,7 @@ console.log("El jugador se encuentra en la posicion: " + jugador.posicionActual)
 
 
 let mapa= {
-    tamano:10,
+    tamano:10 
     posicionInicial:[0,0],
     posicionFinal:[9,9]
 
@@ -39,7 +39,7 @@ let jugador={
     posicionActual:[0,0]
 };
 
-console.log("El tamano del mapa es: " + mapa.tamano);
+console.log("El tamano del mapa es: cambiado" + mapa.tamano);
 console.log("La posicion inicial del mapa es: " + mapa.posicionInicial);
 console.log("La posicion final del mapa es: " + mapa.posicionFinal);
 
