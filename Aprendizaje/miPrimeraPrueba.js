@@ -1,5 +1,8 @@
 const prompt = require("prompt-sync")();
+const {parametro1} = require("./parametros.js");
 
+
+console.log(`probando el ${parametro1}`);
 let movimientos = (mov,jugador,salir=true) => {
 
     
@@ -16,6 +19,7 @@ let movimientos = (mov,jugador,salir=true) => {
     const mensaje = prompt("Esta seguro que quiere salir (si/no): ");
     if (mensaje === "si") {
         return salir = false;
+        console.clear();
     }
 }
 
@@ -89,6 +93,7 @@ console.log("parametro bucle " + i);
 if (jugador.posicionActual[0] === mapa.posicionFinal[0] && jugador.posicionActual[1] === mapa.posicionFinal[1]) {
     i = false;
         console.log("Felicidades, has llegado a la meta");
+        console.clear();
 }
 
 
