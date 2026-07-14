@@ -1,5 +1,28 @@
 const prompt = require("prompt-sync")();
 
+let movimientos = (mov,jugador,salir=true) => {
+
+    
+   if (mov === "derecha") {
+    jugador.posicionActual[1] += 1;
+}else if (mov === "izquierda") {
+    jugador.posicionActual[1] -= 1;     
+}else if (mov === "arriba") {
+    jugador.posicionActual[0] -= 1;
+}else if (mov === "abajo") {
+    jugador.posicionActual[0] += 1;
+}else{
+
+    const mensaje = prompt("Esta seguro que quiere salir (si/no): ");
+    if (mensaje === "si") {
+        return salir = false;
+    }
+}
+
+return salir;
+
+}
+
 function imprimirMapa(mapa, jugador) {
    
 
@@ -28,7 +51,7 @@ console.log("El jugador se encuentra en la posicion: " + jugador.posicionActual)
 
 
 let mapa= {
-    tamano:10 
+    tamano:10, 
     posicionInicial:[0,0],
     posicionFinal:[9,9]
 
@@ -39,7 +62,7 @@ let jugador={
     posicionActual:[0,0]
 };
 
-console.log("El tamano del mapa es: cambiado" + mapa.tamano);
+console.log("El tamano del mapa es: " + mapa.tamano);
 console.log("La posicion inicial del mapa es: " + mapa.posicionInicial);
 console.log("La posicion final del mapa es: " + mapa.posicionFinal);
 
@@ -54,25 +77,15 @@ for (let i = true; i===true;){
 
 let movimiento = prompt("Introduce un movimiento (arriba, abajo, izquierda, derecha):");
 
-if (movimiento === "arriba") {
-    jugador.posicionActual[1] += 1;
-}else if (movimiento === "abajo") {
-    jugador.posicionActual[1] -= 1;     
-}else if (movimiento === "izquierda") {
-    jugador.posicionActual[0] -= 1;
-}else if (movimiento === "derecha") {
-    jugador.posicionActual[0] += 1;
-}else{
-    break;
-}
-
+let salir = movimientos(movimiento,jugador,i);
+i=salir;
 console.log("La posicion actual del jugador es: " + jugador.posicionActual);
 
 console.clear();
 
 imprimirMapa(mapa,jugador);
 
-
+console.log("parametro bucle " + i);
 if (jugador.posicionActual[0] === mapa.posicionFinal[0] && jugador.posicionActual[1] === mapa.posicionFinal[1]) {
     i = false;
         console.log("Felicidades, has llegado a la meta");
