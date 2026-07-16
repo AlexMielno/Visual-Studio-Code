@@ -1,4 +1,4 @@
-const tienda = require("./parametros.js");  
+const {tienda} = require("./parametros.js");  
 
 function mostrarTienda(tienda,jugador) {
     const selectTienda= numeroAleatorio(0, tienda.nombre.length - 1);
