@@ -25,7 +25,7 @@ console.log("El nuevo nombre de la persona es: " + jugador.nombre);
 //Bucle principal del juego.
 for (let i = true; i===true;){
 
-let movimiento = prompt("Introduce un movimiento (arriba, abajo, izquierda, derecha):");
+let movimiento = prompt("Introduce un movimiento (arriba, abajo, izquierda, derecha, Inventario):");
 
 i = movimientos(movimiento,jugador,i);
 
