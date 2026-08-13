@@ -1,0 +1,19 @@
+# Credenciales de Google: NUNCA se suben al repositorio.
+credenciales*.json
+*service*account*.json
+token*.json
+acceso.json
+.env
+
+# Datos financieros.
+*.csv
+*.xlsx
+*.xls
+*cache*.json
+
+# Python.
+.venv/
+__pycache__/
+
+# flujo-caja tiene su propio repositorio privado (github.com/AlexMielno/flujo-caja)
+flujo-caja/
