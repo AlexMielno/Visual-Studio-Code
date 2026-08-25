@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+
+      <h1
+        style="
+          text-align: center;
+          font-weight: bold;
+          background-color: bisque;
+          font-family: cursive;
+          font-size: xx-large;
+        "
+      >
+        Listas Dinamicas
+      </h1>
+      <button id="modeStyle" onclick="darkMode()"> Black Mode</button>
+    </header>
+
+    <main id="principalMain">
+      <ul class="lista">
+        <li class="stand">
+          Productos Disponibles
+
+          <ol id="productos">
+            <li>
+              <input id="producto_1" type="checkbox" /><label for="producto_1"
+                >Producto 1</label
+              >
+            </li>
+            <li>
+              <input id="producto_2" type="checkbox" /><label for="producto_2"
+                >Producto 2</label
+              >
+            </li>
+            <li>
+              <input id="producto_3" type="checkbox" /><label for="producto_3"
+                >Producto 3</label
+              >
+            </li>
+          </ol>
+          <button onclick="extraer('#productos', '#cot1')" class="Guardar">
+            Guardar Productos
+          </button>
+        </li>
+
+        <li class="stand">
+          Viveres Disponibles
+          <ol id="viveres">
+            <li>
+              <input id="producto_4" type="checkbox" /><label for="producto_4"
+                >Alimento 1</label
+              >
+            </li>
+            <li>
+              <input id="producto_5" type="checkbox" /><label for="producto_5"
+                >Alimento 2</label
+              >
+            </li>
+            <li>
+              <input id="producto_6" type="checkbox" /><label for="producto_6"
+                >Alimento 3</label
+              >
+            </li>
+            <li>
+              <input id="producto_0" type="checkbox" /><label for="producto_0"
+                >Alimento 4</label
+              >
+            </li>
+          </ol>
+          <button onclick="extraer('#viveres', '#cot2')" class="Guardar">
+            Guardar Viveres
+          </button>
+        </li>
+
+        <li class="stand">
+          Supervivencia
+          <ol id="herramientas">
+            <li>
+              <input id="producto_7" type="checkbox" /><label for="producto_7"
+                >Herramienta 1</label
+              >
+            </li>
+            <li>
+              <input id="producto_8" type="checkbox" /><label for="producto_8"
+                >Herramienta 2</label
+              >
+            </li>
+            <li>
+              <input id="producto_9" type="checkbox" /><label for="producto_9"
+                >Herramienta 3</label
+              >
+            </li>
+          </ol>
+          <button onclick="extraer('#herramientas', '#cot3')" class="Guardar">
+            Guardar Herramientas
+          </button>
+        </li>
+      </ul>
+
+      <p id="facturado"></p>
+
+      <section id="cot">
+        <h2 id="titulo">Cotizacion por Clasificacion</h2>
+        <section id="cot1" class="listar"></section>
+        <section id="cot2" class="listar"></section>
+        <section id="cot3" class="listar"></section>
+      </section>
+    </main>
+
+    <script src="process.js"></script>
+  </body>
+</html>

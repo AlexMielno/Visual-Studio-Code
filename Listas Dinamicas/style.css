@@ -1,0 +1,91 @@
+ol{
+    border: solid;
+  list-style: none;
+  padding: 0 0 0 0;
+    
+}
+
+
+.lista{
+    
+    display: flex;
+    padding: 0%;
+    margin: 1%;
+     gap: 4%;
+     background-color: bisque;
+     color: #500000;
+     width:100%;
+     justify-content: center;
+     list-style:none ;
+}
+
+.stand{
+    border: solid;
+    padding: 1%;
+   align-items: center;
+    display: flex;
+     flex-direction: column
+
+}
+
+.Guardar{
+    margin: 5% 0 0 0;
+    
+}
+
+#facturado{
+    color:#FFFFFF;
+    background-color: black;
+    font-family: cursive;
+    font-size: 50PX;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#titulo{
+    text-align: center;
+    font-family: cursive;
+}
+
+#principalCot{
+   margin-top: 5%;
+   display: flex;
+}
+
+#cot{
+    border: solid;
+    width: 100%;
+    height: 450px;
+    gap:20px;
+    background-color:bisque;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.listar{
+    border: solid ;
+    width: 30%;
+    height: 300px;
+    font-size: 20px;
+
+}
+
+#titulo{
+    width: 100%;
+}
+
+.blackStyle{
+
+    background-color: rgb(61, 61, 61);
+    color: white;
+
+}
+#modeStyle{
+    margin-left: 93%;
+}
+body{
+    background-color: bisque;
+}
