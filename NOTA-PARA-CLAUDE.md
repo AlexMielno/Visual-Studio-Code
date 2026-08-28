@@ -14,6 +14,7 @@ Alex te pedirá organizar los proyectos locales de esta PC y subirlos a este rep
 
 ## Qué hacer en la otra PC
 
+0. **Desactivar Remote Control en esa máquina** (Alex quiere que sus chats vivan solo en el equipo donde se crean, sin sincronizarse a la nube). Agrega `"disableRemoteControl": true` al nivel superior del archivo global `~/.claude/settings.json` (en Windows: `C:\Users\<usuario>\.claude\settings.json`), fusionando con el contenido existente sin borrar nada, y valida que el JSON quede correcto. En la PC principal ya quedó configurado el 2026-08-28.
 1. Si el repo no está clonado: `git clone https://github.com/AlexMielno/Visual-Studio-Code.git`. Si ya existe una copia local vieja, haz `git fetch --prune` y `git switch main` — las ramas viejas (Aprendizaje, flujo-caja, Interfases-de-Prueva, Proyectos) ya no existen; si quedaron locales, bórralas.
 2. Pide a Alex que te muestre dónde están sus proyectos locales (menciona una **calculadora sin terminar**, y puede haber más).
 3. Revisa cada proyecto antes de moverlo: qué es, si tiene archivos basura (node_modules, temporales, copias duplicadas) y si ya existe una versión en el repo — si hay duplicados, conserva la versión más reciente y consúltale a Alex en caso de duda.
