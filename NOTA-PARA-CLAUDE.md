@@ -85,6 +85,16 @@ Alex te pedirá organizar los proyectos locales de esta PC y subirlos a este rep
 
    Cada ejecución queda registrada en `~/.claude/guardian-privacidad.log` — así Alex puede comprobar que el guardián corre en cada inicio de sesión.
 
+   e. **Ejecutarlo también al iniciar sesión de Windows** (porque la sesión de Claude en VS Code puede quedarse abierta días y el hook de SessionStart dispararse poco). Crea `~/.claude/guardian-privacidad-arranque.vbs` con este contenido (ajustando la ruta al usuario de ese equipo):
+
+   ```vbs
+   ' Lanzador silencioso del guardian de privacidad al iniciar sesion de Windows.
+   ' El 0 significa "ventana oculta": corre sin mostrar consola.
+   CreateObject("Wscript.Shell").Run "node ""C:\Users\<usuario>\.claude\guardian-privacidad.js""", 0, False
+   ```
+
+   Y cópialo a la carpeta de Inicio de Windows (en PowerShell: `Copy-Item <ruta del .vbs> "$([Environment]::GetFolderPath('Startup'))\guardian-privacidad.vbs"`). Pruébalo con `wscript` y verifica que aparezca una línea nueva en la bitácora.
+
    b. En `~/.claude/settings.json`, fusiona (sin borrar nada existente) estas claves de nivel superior, ajustando la ruta del script a la de ese equipo:
 
    ```json
