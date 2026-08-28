@@ -29,6 +29,13 @@ Alex te pedirá organizar los proyectos locales de esta PC y subirlos a este rep
    const os = require("os");
 
    const file = process.argv[2] || path.join(os.homedir(), ".claude", "settings.json");
+   const bitacora = path.join(os.homedir(), ".claude", "guardian-privacidad.log");
+
+   function registrar(resultado) {
+     try {
+       fs.appendFileSync(bitacora, new Date().toISOString() + " | " + resultado + "\n");
+     } catch (e) {}
+   }
 
    function avisar(mensaje) {
      console.log(JSON.stringify({ systemMessage: "🔒 Guardián de privacidad: " + mensaje }));
@@ -46,6 +53,7 @@ Alex te pedirá organizar los proyectos locales de esta PC y subirlos a este rep
      try {
        ajustes = JSON.parse(raw);
      } catch (e) {
+       registrar("ERROR: settings.json con JSON invalido, no se toco");
        avisar("settings.json tiene JSON inválido; no se pudo verificar ni corregir. Revísalo manualmente.");
        process.exit(0);
      }
@@ -63,14 +71,19 @@ Alex te pedirá organizar los proyectos locales de esta PC y subirlos a este rep
 
    if (restaurados.length > 0) {
      fs.writeFileSync(file, JSON.stringify(ajustes, null, 2));
+     registrar("CORREGIDO: " + restaurados.join(", "));
      avisar(
        "el equipo estaba compartiendo chats a la nube. Se restauró: " +
          restaurados.join(", ") +
          ". Los chats vuelven a ser solo locales (reinicia la sesión para aplicar del todo)."
      );
+   } else {
+     registrar("OK: protecciones intactas");
    }
-   // Si todo está bien, no imprime nada: silencio = protegido.
+   // Si todo está bien, no imprime nada al chat: silencio = protegido (la bitácora sí registra).
    ```
+
+   Cada ejecución queda registrada en `~/.claude/guardian-privacidad.log` — así Alex puede comprobar que el guardián corre en cada inicio de sesión.
 
    b. En `~/.claude/settings.json`, fusiona (sin borrar nada existente) estas claves de nivel superior, ajustando la ruta del script a la de ese equipo:
 
