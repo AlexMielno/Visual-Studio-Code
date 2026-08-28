@@ -17,3 +17,8 @@ __pycache__/
 
 # flujo-caja tiene su propio repositorio privado (github.com/AlexMielno/flujo-caja)
 flujo-caja/
+
+# Dependencias de Node: nunca se suben al repositorio.
+node_modules/
+# Carpeta vieja pendiente de borrar (esta bloqueada por la terminal):
+/P1/
