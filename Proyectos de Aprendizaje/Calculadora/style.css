@@ -1,0 +1,40 @@
+#calculadora{
+
+   border:  solid 3px;
+   width: 115px;
+   padding: 0 10px 0 10px;
+    background-color: #6a6d697e;
+
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    min-height: 100vh;
+    border: solid;
+}
+
+#fila1{
+ padding-bottom: 5%;
+}
+
+#fila2{
+    padding-bottom: 5%;
+}
+
+#fila3{
+    padding-bottom: 5%;
+}
+
+#fila4{
+    padding-bottom: 5%;
+}
+
+button{
+
+    width: 25px;
+    height: 25px;
+   
+
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+
+        <h1 style="font-size: 20px;font-weight: bolder;">Calculadora</h1><br>
+    </header>
+    <main>
+
+
+        <div id="calculadora">
+
+            <input id="texto" type="text" placeholder="0.0" style="width: 110px; margin-top: 5px;text-align: center;">
+            <br><br>
+            <div id="fila1">
+                <button onclick="digito(this)">1</button>
+                <button onclick="digito(this)">2</button>
+                <button onclick="digito(this)">3</button>
+                <button onclick="digito(this)">+</button> <br>
+            </div>
+            <div id="fila2">
+                <button onclick="digito(this)">4</button>
+                <button onclick="digito(this)">5</button>
+                <button onclick="digito(this)">6</button>
+                <button onclick="digito(this)">-</button> <br>
+            </div>
+            <div id="fila3">
+                <button onclick="digito(this)">7</button>
+                <button onclick="digito(this)">8</button>
+                <button onclick="b9">9</button>
+                <button onclick="bmultiplicar">*</button> <br>
+            </div>
+            <div id="fila4">
+                <button onclick="bporcentaje">%</button>
+                <button onclick="b0">0</button>
+                <button onclick="bpunto">.</button>
+                <button onclick="bdividir">\</button>
+            </div>
+            <br>
+            <button onclick="Calcular" style="width: 100%;font-weight: bolder; margin-bottom: 10px;">Calcular</button>
+
+
+        </div>
+    </main>
+
+    <script src = "script.js"></script>
+
+
+
+</body>
+
+</html>
