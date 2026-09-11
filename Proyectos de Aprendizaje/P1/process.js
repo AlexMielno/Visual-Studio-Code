@@ -8,16 +8,16 @@ padre.appendChild(ul);
 function crearListaSecundaria(id){
 const padre=document.querySelector(id)
 const ol= document.createElement("ol");
-ol.textContent="prueba exitosa ol";
+ol.textContent="prueba exitosa";
 padre.appendChild(ol);
 }
 
 function crearElemento(id){
 const padre=document.querySelector(id)
 const li= document.createElement("li");
-li.textContent="prueba exitosa li";
+li.textContent=document.querySelector("#nuevoCampo").value;
 padre.appendChild(li);
-
+formularioVisible();
 }
 
 class Lista{
@@ -25,15 +25,14 @@ class Lista{
         id.this=id;
         nivel.this=nivel;
     }
-
-    
-}
+    }
 
 function formularioVisible(){
 const formulario=document.querySelector("#form1");
-
-formulario.classList.
+formulario.classList.toggle("visible");
 }
 
 const Botton1 = document.querySelector("#Button1");
-Botton1.addEventListener("click", ()=>formularioVisible);
+Botton1.addEventListener("click", formularioVisible);
+
+document.querySelector("#guardar1").addEventListener("click",()=>crearElemento("#second1"));
