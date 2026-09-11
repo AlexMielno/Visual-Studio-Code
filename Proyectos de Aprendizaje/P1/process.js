@@ -19,3 +19,14 @@ li.textContent="prueba exitosa li";
 padre.appendChild(li);
 
 }
+
+class Lista{
+    constructor(id, nivel){
+        id.this=id;
+        nivel.this=nivel;
+    }
+
+    
+}
+
+document.querySelector("#Button1").addEventListener("click",crearElemento("#second1"));

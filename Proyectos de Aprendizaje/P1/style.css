@@ -22,10 +22,13 @@ main{
 background-color:azure;
 margin: 2% 2% 2% 2%;
 border-radius: 10px;
+position: relative;
 }
 
 body{
-    background-color: bisque;
+   background: linear-gradient(270deg, #ff6b6b, #845ec2, #2ec4b6);
+    background-size: 600% 600%;
+    animation: olas 12s ease infinite;
 }
 
 h2{
@@ -44,4 +47,32 @@ li{
 button{
  display: block;
  margin: auto;
+}
+
+@keyframes olas {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.tituloSeccion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.agg{
+   margin: 0;
+   height:  25px;
+   position: absolute;
+   top: 5px;
+   right: 5px;
+}
+
+.aggSubTitulo{
+
+    position: absolute;
+    left: 90%;
 }
