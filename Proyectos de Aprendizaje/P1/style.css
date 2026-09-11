@@ -76,3 +76,12 @@ button{
     position: absolute;
     left: 90%;
 }
+
+.invisible{
+  visibility: hidden;
+position: absolute;
+}
+.visible{
+    visibility: visible;
+    position: relative;
+}

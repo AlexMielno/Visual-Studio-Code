@@ -29,4 +29,11 @@ class Lista{
     
 }
 
-document.querySelector("#Button1").addEventListener("click",crearElemento("#second1"));
+function formularioVisible(){
+const formulario=document.querySelector("#form1");
+
+formulario.classList.
+}
+
+const Botton1 = document.querySelector("#Button1");
+Botton1.addEventListener("click", ()=>formularioVisible);
