@@ -1,4 +1,5 @@
-
+let calculo=[];
+let resultado=[];
 
 function digito(boton){
 const escribir=document.getElementById("texto");
