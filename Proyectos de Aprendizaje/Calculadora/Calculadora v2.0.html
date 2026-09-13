@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+
+        <h1 style="font-size: 20px;font-weight: bolder;">Calculadora</h1><br>
+    </header>
+    <main>
+
+
+        <div id="calculadora">
+
+            <input id="texto" type="text" placeholder="0.0" style="width: 110px; margin-top: 5px;text-align: center;">
+            <br><br>
+            <div id="fila1">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>+</button> <br>
+            </div>
+            <div id="fila2">
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>-</button> <br>
+            </div>
+            <div id="fila3">
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>*</button> <br>
+            </div>
+            <div id="fila4">
+                <button>%</button>
+                <button>0</button>
+                <button>.</button>
+                <button>/</button>
+            </div>
+            <br>
+            <button id="calcular" onclick="calcular('#texto')" style="width: 100%;font-weight: bolder; margin-bottom: 10px;">Calcular</button>
+
+
+        </div>
+    </main>
+
+    <script src = "script.js"></script>
+
+
+
+</body>
+
+</html>

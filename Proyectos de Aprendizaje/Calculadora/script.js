@@ -2,14 +2,10 @@
 
 function digito(boton){
 const escribir=document.getElementById("texto");
-
-
 escribir.value+=boton.innerHTML;
-
 }
 
 function calcular(input){
-
 const calculadora=document.querySelector("#calculadora");
 const textCalculate=document.querySelector(input);
 let datos=[];
@@ -32,3 +28,12 @@ return termino+=prev;
 textCalculate.value+=`=${datos}`;
 
 }
+
+const calculadora =document.querySelector("#calculadora");
+calculadora.addEventListener("click",(evento)=>{
+    if(evento.target.tagName==="BUTTON" && evento.target.id!=="calcular"){
+     digito(evento.target) 
+    }
+
+}
+);
